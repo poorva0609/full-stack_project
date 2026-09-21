@@ -30,7 +30,6 @@ export const authenticate = (req, res, next) => {
 export const authenticateRefreshToken = (req, res, next) => {
   try {
 
-    console.log("COOKIES: hello " , req.cookies)
     const token = req.cookies.refreshToken;
 
     if (!token) {

@@ -1,5 +1,5 @@
 import  jwt  from "jsonwebtoken";
-import { AccessTokenSchema, RefreshTokenSchema } from "./validation.js";
+import { AccessTokenSchema, RefreshTokenSchema } from "./ValidationSchema.js";
 
 export const salt = 10;
 

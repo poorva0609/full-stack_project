@@ -14,13 +14,14 @@ import PublicRoute from "./PublicRoutes";
 import ProtectedRoute from "./ProtectedRoute";
 import ForgotPass from "./Pages/ChangePass";
 import ChangePass from "./Pages/ChangePass";
+import Home from "./Pages/Home";
  
 
 const AppRoutes = () => {
   return (
     <Box>
       <Routes>
-
+        <Route path="/" element={<Home />} />
         {/* ================= PUBLIC ROUTES ================= */}
 
         <Route element={<PublicRoute />}>

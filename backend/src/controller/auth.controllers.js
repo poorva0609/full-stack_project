@@ -1,15 +1,14 @@
 import bcrypt from "bcrypt";
 import crypto from "crypto";
-import { registerSchema , loginSchema } from "../utils/validation.js";
+import { registerSchema , loginSchema } from "../utils/ValidationSchema.js";
  import {prismaClient} from "../prismaClient/Client.js";
 import {AppError} from "../utils/AppError.js";
-import { GenerateAccessToken, GenerateRefreshToken, salt } from "../utils/defaults.js";
+import { GenerateAccessToken, GenerateRefreshToken, salt } from "../utils/AccessFns.js";
 
 
 
 export const register = async (req, res, next) => {
   try {
-    console.log("Register request body:", req.body);
     // 1. Validate request
     const result = registerSchema.safeParse(req.body);
     if (!result.success) {
@@ -65,11 +64,8 @@ export const register = async (req, res, next) => {
         "INTERNAL_SERVER_ERR"
       )
     }
-    console.log("Access Token:", accessToken);
-    console.log("Refresh Token:", refreshToken);
     // 7. Hash refresh token before storing
     const tokenHash = await bcrypt.hash(refreshToken, salt);
-    console.log("Hashed Refresh Token:", tokenHash);
     // 8. Store refresh-token record
     await prismaClient.refreshToken.create({
       data: {
@@ -165,8 +161,6 @@ export const login = async (req, res, next) => {
       id: existingUser.id,
       role: existingUser.role,
     });
-    console.log(typeof(existingUser.id) , typeof(existingUser.role))
-
     const jti = crypto.randomUUID();
 
     const refreshToken = GenerateRefreshToken({
@@ -428,7 +422,6 @@ export const refreshToken = async (req, res, next) => {
         "INVALID_REFRESH_SESSION"
       );
     }
-    console.log("User ID:", userId, typeof(userId)  , typeof(session.userId),"Role:", role, "JTI:", jti);
     const newAccessToken = GenerateAccessToken({
       id: session.userId,
       role

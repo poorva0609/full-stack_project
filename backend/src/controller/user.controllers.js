@@ -4,14 +4,6 @@ import { AppError } from "../utils/AppError.js"
 
 export const getProfile = async(req , res , next) => {
     try {
-
-        console.time("DB");
-
-  const result = await prismaClient.$queryRaw`SELECT 1`;
-
-  console.timeEnd("DB");
-
-  console.log(result);
         const { userId } = req.user
         if(!userId){
             throw new AppError(
