@@ -1,0 +1,150 @@
+.box_styling {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.taskform_style {
+  width: 500px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 35px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.taskform_style h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #1f2937;
+}
+
+.form_name,
+.form_description {
+  width: 100%;
+}
+
+.form_description .MuiInputBase-root {
+  min-height: 100px;
+  align-items: flex-start;
+}
+
+.taskform_style .MuiFormControl-root {
+  width: 100%;
+}
+
+.taskform_style .MuiFormLabel-root {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 5px;
+}
+
+.taskform_style .MuiFormControlLabel-root {
+  margin-right: 20px;
+  color: #4b5563;
+}
+
+.form_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0 0 0;
+}
+
+.form_button button {
+  min-width: 130px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.form_button button[type="submit"] {
+  background: #1976d2;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(25, 118, 210, 0.2);
+}
+
+.form_button button:last-child {
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  background: #f9fafb;
+}
+
+@media (max-width: 768px) {
+  .box_styling {
+    padding-top: 90px;
+  }
+
+  .taskform_style {
+    width: 480px;
+    padding: 30px;
+    gap: 18px;
+  }
+
+  .taskform_style h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 550px) {
+  .box_styling {
+    padding-top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .taskform_style {
+    width: 100%;
+    max-width: 100%;
+    padding: 25px 20px;
+    border-radius: 16px;
+    gap: 17px;
+  }
+
+  .taskform_style h3 {
+    font-size: 23px;
+  }
+
+  .form_button {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form_button button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .box_styling {
+    padding-top: 85px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .taskform_style {
+    padding: 20px 15px;
+    border-radius: 14px;
+  }
+
+  .taskform_style h3 {
+    font-size: 20px;
+  }
+}

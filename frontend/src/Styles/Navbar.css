@@ -1,0 +1,116 @@
+.absolute_parent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.parent_Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: white;
+  padding: 14px 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.parent_Navbar h5 {
+  font-weight: 700;
+  color: #1f2937;
+  margin-right: auto;
+}
+
+.parent_Navbar a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.parent_Navbar button {
+  border-radius: 10px;
+  padding: 9px 18px;
+  background: #1976d2;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .absolute_parent {
+    padding: 10px 12px;
+  }
+
+  .parent_Navbar {
+    gap: 10px;
+    padding: 12px 15px;
+  }
+
+  .parent_Navbar a {
+    padding: 7px 8px;
+    font-size: 14px;
+  }
+
+  .parent_Navbar h5 {
+    font-size: 18px;
+  }
+
+  .parent_Navbar button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .absolute_parent {
+    padding: 8px;
+  }
+
+  .parent_Navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .parent_Navbar h5 {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 5px 0;
+  }
+
+  .parent_Navbar a {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .parent_Navbar button {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .parent_Navbar {
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .parent_Navbar a {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .parent_Navbar button {
+    font-size: 11px;
+    padding: 6px 9px;
+  }
+}

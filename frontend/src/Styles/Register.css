@@ -1,0 +1,25 @@
+.parent-register{
+    display:flex;
+    width:100%;
+    align-items:center;
+    height:100vh;
+    justify-content: center;
+    margin:auto auto;
+}
+
+.child-register{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap:20px;
+    border:2px solid white;
+    border-width:20px;
+    border-radius:10%;
+    box-shadow: 0 6px  15px rgba(0, 0, 0, 0.15);
+}
+
+.register_button{
+    background-color: purple;
+    color:white;
+}

@@ -1,0 +1,25 @@
+.parent{
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content: center;
+    margin:auto auto;
+    height:100vh;
+}
+
+.child{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    
+}
+
+.pass_BUtton{
+    padding: 15px 30px;
+}
+
+.forgotPass-image{
+    height:250px;
+    width:270px;
+}

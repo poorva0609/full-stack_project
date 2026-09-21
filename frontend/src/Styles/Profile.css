@@ -1,0 +1,301 @@
+.absolute_parent_profile {
+  min-height: 100vh;
+  width: 100%;
+  background: #f5f7fb;
+  box-sizing: border-box;
+}
+
+.profile_page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 40px;
+  box-sizing: border-box;
+}
+
+.inner-profile {
+  width: 650px;
+  max-width: 100%;
+  padding: 40px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.profile_image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  font-size: 45px;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#h3 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #1f2937;
+}
+
+.heading #h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6b7280;
+  word-break: break-word;
+  text-align: center;
+}
+
+.name,
+.email,
+.age {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.name #h5,
+.email #h5,
+.age #h5 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.name > p,
+.email > p,
+.age > p {
+  margin: 0;
+  font-size: 16px;
+  color: #6b7280;
+  text-align: right;
+  word-break: break-word;
+}
+
+.name input,
+.email input,
+.age input {
+  width: 55%;
+  padding: 9px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 15px;
+  color: #374151;
+  box-sizing: border-box;
+}
+
+.name input:focus,
+.email input:focus,
+.age input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.profile_button {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.profile_button button {
+  flex: 1;
+  height: 48px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.profile_button button:first-child {
+  background: #6366f1;
+}
+
+.profile_button button:last-child {
+  background: #ef4444;
+}
+
+.profile_button button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .profile_page {
+    padding: 90px 20px 30px;
+  }
+
+  .inner-profile {
+    width: 600px;
+    padding: 30px;
+  }
+
+  #h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 550px) {
+  .profile_page {
+    padding: 90px 15px 25px;
+    align-items: flex-start;
+  }
+
+  .inner-profile {
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+
+  .heading {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  #h3 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .heading #h5 {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .name,
+  .email,
+  .age {
+    padding: 15px 3px;
+    gap: 15px;
+  }
+
+  .name #h5,
+  .email #h5,
+  .age #h5 {
+    font-size: 15px;
+  }
+
+  .name > p,
+  .email > p,
+  .age > p {
+    font-size: 14px;
+    max-width: 55%;
+  }
+
+  .profile_button {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .profile_page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .inner-profile {
+    padding: 20px 15px;
+    border-radius: 14px;
+  }
+
+  .profile_image {
+    width: 90px;
+    height: 90px;
+    font-size: 38px;
+  }
+
+  #h3 {
+    font-size: 21px;
+  }
+
+  .heading #h5 {
+    font-size: 13px;
+  }
+
+  .name,
+  .email,
+  .age {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .name > p,
+  .email > p,
+  .age > p {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .name input,
+  .email input,
+  .age input {
+    width: 100%;
+  }
+
+  .profile_button {
+    flex-direction: column;
+  }
+
+  .profile_button button {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 300px) {
+  .profile_page {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .inner-profile {
+    padding: 18px 12px;
+  }
+
+  .profile_image {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  #h3 {
+    font-size: 19px;
+  }
+
+  .heading #h5 {
+    font-size: 12px;
+  }
+
+  .name #h5,
+  .email #h5,
+  .age #h5 {
+    font-size: 14px;
+  }
+}
